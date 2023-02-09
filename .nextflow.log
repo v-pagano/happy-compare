@@ -1,0 +1,121 @@
+Feb-09 10:06:39.991 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile gemini --outputFolder /scratch/vpagano/happy-test/output/
+Feb-09 10:06:40.084 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.3
+Feb-09 10:06:40.102 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/vpagano/.nextflow/plugins; core-plugins: nf-amazon@1.11.1,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.5,nf-tower@1.5.6,nf-wave@0.5.2
+Feb-09 10:06:40.113 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-09 10:06:40.114 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-09 10:06:40.117 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Feb-09 10:06:40.133 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-09 10:06:40.149 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/vpagano/happy-compare/nextflow.config
+Feb-09 10:06:40.150 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/vpagano/happy-compare/nextflow.config
+Feb-09 10:06:40.172 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `gemini`
+Feb-09 10:06:40.765 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [gemini, reports, noTower, dback]
+Feb-09 10:06:40.793 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Feb-09 10:06:40.808 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [friendly_plateau] DSL2 - revision: 92219414b4
+Feb-09 10:06:40.809 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-09 10:06:40.809 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-tower@1.5.6]
+Feb-09 10:06:40.810 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-tower version: 1.5.6
+Feb-09 10:06:40.826 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-tower@1.5.6' resolved
+Feb-09 10:06:40.827 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-tower@1.5.6'
+Feb-09 10:06:40.839 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-tower@1.5.6
+Feb-09 10:06:40.850 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/vpagano/.nextflow/secrets/store.json
+Feb-09 10:06:40.853 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5edacf20] - activable => nextflow.secret.LocalSecretsProvider@5edacf20
+Feb-09 10:06:40.906 [main] DEBUG nextflow.Session - Session UUID: 2a766a66-04be-4df8-b860-20ad538ff3c4
+Feb-09 10:06:40.906 [main] DEBUG nextflow.Session - Run name: friendly_plateau
+Feb-09 10:06:40.907 [main] DEBUG nextflow.Session - Executor pool size: 36
+Feb-09 10:06:40.917 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=108; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-09 10:06:40.920 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/vpagano/happy-compare/nextflow.config
+Feb-09 10:06:40.921 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/vpagano/happy-compare/nextflow.config
+Feb-09 10:06:40.921 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `gemini`
+Feb-09 10:06:40.983 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [gemini, reports, noTower, dback]
+Feb-09 10:06:41.005 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.3 build 5834
+  Created: 21-11-2022 21:37 UTC (14:37 MDT)
+  System: Linux 4.18.0-305.3.1.el8_4.x86_64
+  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 11.0.2+9
+  Encoding: UTF-8 (UTF-8)
+  Process: 2574523@gemini-login1 [192.168.31.41]
+  CPUs: 36 - Mem: 187.4 GB (14.5 GB) - Swap: 12 GB (9.9 GB)
+Feb-09 10:06:41.029 [main] DEBUG nextflow.Session - Work-dir: /scratch/vpagano/tmp [nfs]
+Feb-09 10:06:41.029 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/vpagano/happy-compare/bin
+Feb-09 10:06:41.038 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-09 10:06:41.049 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-09 10:06:41.051 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Feb-09 10:06:41.221 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-09 10:06:41.233 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 37; maxThreads: 1000
+Feb-09 10:06:41.329 [main] DEBUG nextflow.Session - Session start
+Feb-09 10:06:41.339 [main] DEBUG io.seqera.tower.plugin.TowerClient - Creating Tower observer -- endpoint=http://pnap-tower.tgen.org:8000/api; requestInterval=1s; aliveInterval=1m; maxRetries=5; backOffBase=3; backOffDelay=250
+Feb-09 10:06:41.587 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-09 10:06:41.971 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 10:06:41.972 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 10:06:41.979 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Feb-09 10:06:41.982 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Feb-09 10:06:41.985 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Feb-09 10:06:42.046 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 10:06:42.046 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 10:06:42.051 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: tabix, publishResults, happy, gzip
+Feb-09 10:06:42.085 [main] INFO  io.seqera.tower.plugin.TowerClient - Monitor the execution with Nextflow Tower using this URL: http://pnap-tower.tgen.org:8000/user/vpagano/watch/5bvkl9WaVUeDgc
+Feb-09 10:06:42.087 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Feb-09 10:06:42.088 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > happy
+Feb-09 10:06:42.089 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > publishResults
+Feb-09 10:06:42.090 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Feb-09 10:06:42.090 [main] DEBUG nextflow.Session - Session await
+Feb-09 10:06:42.546 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process happy (6) > jobId: 1599332; workDir: /scratch/vpagano/tmp/ae/4e835d69afc01b2be602280160919b
+Feb-09 10:06:42.548 [Task submitter] INFO  nextflow.Session - [ae/4e835d] Submitted process > happy (6)
+Feb-09 10:06:43.370 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process happy (5) > jobId: 1599333; workDir: /scratch/vpagano/tmp/e7/88833031ee2053f284cf89ab0f14fb
+Feb-09 10:06:43.370 [Task submitter] INFO  nextflow.Session - [e7/888330] Submitted process > happy (5)
+Feb-09 10:06:43.612 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process happy (2) > jobId: 1599334; workDir: /scratch/vpagano/tmp/89/e75eee6d19884a03e83490df07b164
+Feb-09 10:06:43.612 [Task submitter] INFO  nextflow.Session - [89/e75eee] Submitted process > happy (2)
+Feb-09 10:06:43.651 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process happy (3) > jobId: 1599335; workDir: /scratch/vpagano/tmp/0c/6c4c41e833916dab4870211bb341e3
+Feb-09 10:06:43.652 [Task submitter] INFO  nextflow.Session - [0c/6c4c41] Submitted process > happy (3)
+Feb-09 10:06:43.694 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process happy (1) > jobId: 1599336; workDir: /scratch/vpagano/tmp/72/f3a8bced6a7de4f980f49c71be0e09
+Feb-09 10:06:43.694 [Task submitter] INFO  nextflow.Session - [72/f3a8bc] Submitted process > happy (1)
+Feb-09 10:06:43.736 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process happy (4) > jobId: 1599337; workDir: /scratch/vpagano/tmp/58/be8504e238b791be1eeac9edfa253a
+Feb-09 10:06:43.736 [Task submitter] INFO  nextflow.Session - [58/be8504] Submitted process > happy (4)
+Feb-09 10:11:32.010 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599334; id: 2; name: happy (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/89/e75eee6d19884a03e83490df07b164 started: 1675962407391; exited: 2023-02-09T17:11:24.709627Z; ]
+Feb-09 10:11:32.239 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process publishResults (1) > jobId: 1599339; workDir: /scratch/vpagano/tmp/f8/c6e96c74d246892982cd11ae34c147
+Feb-09 10:11:32.240 [Task submitter] INFO  nextflow.Session - [f8/c6e96c] Submitted process > publishResults (1)
+Feb-09 10:11:37.011 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599339; id: 7; name: publishResults (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/f8/c6e96c74d246892982cd11ae34c147 started: 1675962697004; exited: 2023-02-09T17:11:33.586353Z; ]
+Feb-09 10:11:37.039 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=108; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-09 10:11:47.003 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[jobId: 1599332; id: 6; name: happy (6); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/ae/4e835d69afc01b2be602280160919b started: 1675962406992; exited: -; ]
+~> TaskHandler[jobId: 1599333; id: 5; name: happy (5); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/e7/88833031ee2053f284cf89ab0f14fb started: 1675962407389; exited: -; ]
+~> TaskHandler[jobId: 1599335; id: 3; name: happy (3); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/0c/6c4c41e833916dab4870211bb341e3 started: 1675962407393; exited: -; ]
+~> TaskHandler[jobId: 1599336; id: 1; name: happy (1); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/72/f3a8bced6a7de4f980f49c71be0e09 started: 1675962407396; exited: -; ]
+~> TaskHandler[jobId: 1599337; id: 4; name: happy (4); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/58/be8504e238b791be1eeac9edfa253a started: 1675962407397; exited: -; ]
+Feb-09 10:11:57.007 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599332; id: 6; name: happy (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/ae/4e835d69afc01b2be602280160919b started: 1675962406992; exited: 2023-02-09T17:11:29.124062Z; ]
+Feb-09 10:11:57.020 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599333; id: 5; name: happy (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/e7/88833031ee2053f284cf89ab0f14fb started: 1675962407389; exited: 2023-02-09T17:11:45.708265Z; ]
+Feb-09 10:11:57.250 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process publishResults (2) > jobId: 1599340; workDir: /scratch/vpagano/tmp/4b/a1cb55ec0b6a1d82f3960aaf7df8cc
+Feb-09 10:11:57.251 [Task submitter] INFO  nextflow.Session - [4b/a1cb55] Submitted process > publishResults (2)
+Feb-09 10:11:58.019 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process publishResults (3) > jobId: 1599341; workDir: /scratch/vpagano/tmp/c6/5c12de5a665a8262706653d0a0d3d4
+Feb-09 10:11:58.019 [Task submitter] INFO  nextflow.Session - [c6/5c12de] Submitted process > publishResults (3)
+Feb-09 10:12:02.007 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599340; id: 8; name: publishResults (2); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/4b/a1cb55ec0b6a1d82f3960aaf7df8cc started: 1675962722006; exited: 2023-02-09T17:11:58.843605Z; ]
+Feb-09 10:12:02.025 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599341; id: 9; name: publishResults (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/c6/5c12de5a665a8262706653d0a0d3d4 started: 1675962722023; exited: 2023-02-09T17:11:58.841893Z; ]
+Feb-09 10:16:47.015 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[jobId: 1599335; id: 3; name: happy (3); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/0c/6c4c41e833916dab4870211bb341e3 started: 1675962407393; exited: -; ]
+~> TaskHandler[jobId: 1599336; id: 1; name: happy (1); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/72/f3a8bced6a7de4f980f49c71be0e09 started: 1675962407396; exited: -; ]
+~> TaskHandler[jobId: 1599337; id: 4; name: happy (4); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/58/be8504e238b791be1eeac9edfa253a started: 1675962407397; exited: -; ]
+Feb-09 10:20:52.031 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599336; id: 1; name: happy (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/72/f3a8bced6a7de4f980f49c71be0e09 started: 1675962407396; exited: 2023-02-09T17:20:34.385558Z; ]
+Feb-09 10:20:52.360 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process publishResults (4) > jobId: 1599342; workDir: /scratch/vpagano/tmp/3f/4537f731379dab7499d29e19900fc7
+Feb-09 10:20:52.360 [Task submitter] INFO  nextflow.Session - [3f/4537f7] Submitted process > publishResults (4)
+Feb-09 10:20:57.029 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599342; id: 10; name: publishResults (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/3f/4537f731379dab7499d29e19900fc7 started: 1675963257028; exited: 2023-02-09T17:20:53.838961Z; ]
+Feb-09 10:21:47.030 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[jobId: 1599335; id: 3; name: happy (3); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/0c/6c4c41e833916dab4870211bb341e3 started: 1675962407393; exited: -; ]
+~> TaskHandler[jobId: 1599337; id: 4; name: happy (4); status: RUNNING; exit: -; error: -; workDir: /scratch/vpagano/tmp/58/be8504e238b791be1eeac9edfa253a started: 1675962407397; exited: -; ]
+Feb-09 10:22:12.032 [Task monitor] DEBUG nextflow.file.FileHelper - NFS path (true): /scratch/vpagano/tmp
+Feb-09 10:22:12.046 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599335; id: 3; name: happy (3); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/0c/6c4c41e833916dab4870211bb341e3 started: 1675962407393; exited: 2023-02-09T17:22:03.336376Z; ]
+Feb-09 10:22:12.296 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process publishResults (5) > jobId: 1599343; workDir: /scratch/vpagano/tmp/6f/71bc9ce9129d764950751247c21505
+Feb-09 10:22:12.296 [Task submitter] INFO  nextflow.Session - [6f/71bc9c] Submitted process > publishResults (5)
+Feb-09 10:22:17.034 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599343; id: 11; name: publishResults (5); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/6f/71bc9ce9129d764950751247c21505 started: 1675963337033; exited: 2023-02-09T17:22:13.119102Z; ]
+Feb-09 10:23:12.044 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599337; id: 4; name: happy (4); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/58/be8504e238b791be1eeac9edfa253a started: 1675962407397; exited: 2023-02-09T17:22:27.267333Z; ]
+Feb-09 10:23:12.235 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process publishResults (6) > jobId: 1599344; workDir: /scratch/vpagano/tmp/93/79a7d764cf6fed33c6fc2fd95fa711
+Feb-09 10:23:12.236 [Task submitter] INFO  nextflow.Session - [93/79a7d7] Submitted process > publishResults (6)
+Feb-09 10:23:17.043 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 1599344; id: 12; name: publishResults (6); status: COMPLETED; exit: 0; error: -; workDir: /scratch/vpagano/tmp/93/79a7d764cf6fed33c6fc2fd95fa711 started: 1675963397037; exited: 2023-02-09T17:23:13.78956Z; ]
+Feb-09 10:23:17.059 [main] DEBUG nextflow.Session - Session await > all processes finished
+Feb-09 10:23:17.064 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-09 10:23:18.140 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Feb-09 10:23:18.146 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=12; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=23h 38m 27s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=6; peakCpus=144; peakMemory=0; ]
+Feb-09 10:23:18.429 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Feb-09 10:23:18.430 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-tower@1.5.6'
+Feb-09 10:23:18.430 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-tower
+Feb-09 10:23:18.446 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Feb-09 10:23:18.446 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
