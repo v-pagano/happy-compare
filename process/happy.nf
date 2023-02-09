@@ -13,6 +13,7 @@ process happy {
         chromosome = '-l ' + chr
         chromosomeTag = '-' + chr
     } else {
+        chromosome = ''
         chromosomeTag = ''
     }
     """
