@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/YOUR_PIPELINE/master/nextflow_schema.json",
+    "title": "Nextflow pipeline parameters",
+    "description": "This pipeline uses Nextflow and processes some kind of data. The JSON Schema was built using the nf-core pipeline schema builder.",
+    "type": "object",
+    "definitions": {
+        "general": {
+            "title": "General Setup",
+            "type": "object",
+            "required": [
+                "input",
+                "outputFolder"
+            ],
+            "properties": {
+                "input": {
+                    "type": "string",
+                    "description": "Path to the input csv file"
+                },
+                "outputFolder": {
+                    "type": "string",
+                    "description": "Directory for output files",
+                }
+            }
+        },
+        "optional": {
+            "title": "Optional settings",
+            "type": "object",
+            "properties": {
+                "happyOptions": {
+                    "type": "string",
+                    "description": "Additional parameters for hap.py",
+                    "default": "--roc QUAL --roc-filter LowQual --no-leftshift --no-decompose --gender=none --pass-only",
+                    "hidden": true
+                },
+                "reference": {
+                    "type": "string",
+                    "description": "Reference .fa",
+                    "default": "/scratch/vpagano/play/GRCh38tgen_decoy_alts_hla.fa",
+                    "hidden": true
+                },
+                "SDF": {
+                    "type": "string",
+                    "description": "Reference SDF",
+                    "default": "/scratch/vpagano/happy-test/GRCh38tgen_decoy_alts_hla.sdf",
+                    "hidden": true
+                },
+                "bedFile": {
+                    "type": "string",
+                    "description": "Bed file for comparison locations",
+                    "default": "/scratch/vpagano/happy-test/HG002_GRCh38_1_22_v4.2.1_benchmark_noinconsistent.bed",
+                    "hidden": true
+                },
+                "stratifications": {
+                    "type": "string",
+                    "description": "stratification tsv file",
+                    "default": "/scratch/vpagano/happy-test/v3.1-GRCh38-stratifications-all-except-genome-specific-stratifications.tsv",
+                    "hidden": true
+                }
+            }
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/general"
+        },
+        {
+            "$ref": "#/definitions/optional"
+        }
+    ]
+}
