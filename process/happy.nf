@@ -19,7 +19,7 @@ process happy {
         chromosomeTag = ''
     }
     """
-        hap.py ${vcfTruth} ${vcfTest} -f ${bedFile} ${chromosome} --stratification ${stratFile} -r ${ref} -o ${sampleId}-${tag}-${chromosomeTag} --engine=vcfeval --engine-vcfeval-template ${SDF} ${params.happyOptions} --verbose --logfile ${sampleId}-${tag}${chromosomeTag}.log --threads ${task.cpus}
+        hap.py ${vcfTruth} ${vcfTest} -f ${bedFile} ${chromosome} --stratification ${stratFile} -r ${ref} -o ${sampleId}-${tag}${chromosomeTag} --engine=vcfeval --engine-vcfeval-template ${SDF} ${params.happyOptions} --verbose --logfile ${sampleId}-${tag}${chromosomeTag}.log --threads ${task.cpus}
     """
 }
 
