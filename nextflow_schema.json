@@ -19,7 +19,7 @@
                 },
                 "outputFolder": {
                     "type": "string",
-                    "description": "Directory for output files",
+                    "description": "Directory for output files"
                 }
             }
         },
