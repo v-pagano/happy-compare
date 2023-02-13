@@ -7,7 +7,7 @@ process happy {
 
     container params.happyContainer
     cpus params.happyCpus
-    queue 'defq,cpu-scavenge'
+    queue 'defq'
     clusterOptions '--time=12:00:00'
 
     script:
