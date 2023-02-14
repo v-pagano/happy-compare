@@ -1,0 +1,3 @@
+﻿sampleId,truthVcf,bedFile,chromosome,stratifications,reference,SDF,GATK,DV,SBPAN,SBAI,HPRCDV,HPRCDTrio
+HG002,/scratch/vpagano/happy-test/HG002_GRCh38_1_22_v4.2.1_benchmark.vcf.gz,,,,,,/scratch/vpagano/happy-test/HG002_HiSeq30x_subsampled_R_pb_haplotypecaller.vcf.gz,/scratch/vpagano/happy-test/HG002_HiSeq30x_subsampled_R_pb_pb_deepvariant.vcf.gz,/scratch/vpagano/happy-test/HG002_HiSeq30x_subsampled_R_PG.filtered.vcf.gz,/scratch/vpagano/happy-test/HG002_HiSeq30x_subsampled_R_AMR.filtered.vcf.gz,/scratch/vpagano/happy-test/HG002.30x_novaseq_pcrfree.giraffedv.vcf.gz,/scratch/vpagano/happy-test/HG002_cohort.joint_called.trained_model.deeptrio.indel_realigned.unfiltered-renamed.HG002.vcf.gz
+
