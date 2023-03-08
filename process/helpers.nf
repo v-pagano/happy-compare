@@ -1,12 +1,12 @@
 process publishResults {
     input:
-        path f
+        tuple path(f), val(outDir)
 
     output:
         path f
 
     cpus 1
-    publishDir path: params.outputFolder, mode: 'copy', overwrite: 'true'
+    publishDir path: "${outDir}", mode: 'copy', overwrite: 'true'
 
     script:
     """

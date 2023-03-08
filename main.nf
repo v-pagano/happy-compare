@@ -6,11 +6,35 @@ include { publishResults } from './process/helpers'
 
 workflow {
 
-    publishFiles = Channel.empty()
+    allChromosomes = [ 
+        'chr1', 
+        'chr2', 
+        'chr3', 
+        'chr4', 
+        'chr5', 
+        'chr6', 
+        'chr7', 
+        'chr8', 
+        'chr9', 
+        'chr10', 
+        'chr11', 
+        'chr12', 
+        'chr13', 
+        'chr14', 
+        'chr15', 
+        'chr16', 
+        'chr17', 
+        'chr18', 
+        'chr19', 
+        'chr20', 
+        'chr21', 
+        'chr22'
+    ]
 
     xx = CSV_PARSE(params.input)
 
-    happy(xx)
+    xx = xx.combine(allChromosomes).map { it[0] + [ chr: it[1] ] }.view()
+    happy(xx, params.outputFolder)
 
     publishResults(happy.out.publishFiles)
 
