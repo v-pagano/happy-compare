@@ -23,6 +23,8 @@ process gzip {
         path "*.gz"
 
     container 'docker://ghcr.io/v-pagano/pigz'
+    clusterOptions '-A tgen-371000'
+
 
     cpus 24
 
@@ -49,4 +51,22 @@ process tabix {
         ${params.petagene ? params.petagenePreload : ''} bgzip ${vcf}
         tabix ${vcf}.gz
     """
+}
+
+process dback2Gemini {
+
+    input:
+        val dbackFile
+
+    output:
+        path "*"
+
+
+    script:
+        dbackFile = dbackFile.replace("labs", "tgen_labs")
+        dbackFile = dbackFile.replace("scratch", "dback_scratch")
+        dbackFile = dbackFile.replace("home", "tgen_home")
+        """
+            scp gemini-data1.rc.tgen.org:${dbackFile} .
+        """
 }

@@ -10,6 +10,7 @@ process happy {
     cpus params.happyCpus
     queue params.happyQueue
     time '23h'
+    errorStrategy 'ignore'
     clusterOptions '-A tgen-371000'
 
     script:

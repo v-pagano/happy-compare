@@ -1,0 +1,2 @@
+sampleId,truthVcf,bedFile,chromosome,stratifications,reference,SDF,HPRCTrio
+HG002,/scratch/vpagano/happy-test/chr1-22/1kGP_high_coverage_Illumina.chr*.filtered.SNV_INDEL_SV_phased_panel-NA12878.vcf.gz,,,,,,/scratch/vpagano/happy-test/HG002_cohort.joint_called.trained_model.deeptrio.indel_realigned.unfiltered-renamed.HG002.vcf.gz
