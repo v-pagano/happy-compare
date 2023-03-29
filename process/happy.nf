@@ -8,6 +8,7 @@ process happy {
 
     container params.happyContainer
     cpus params.happyCpus
+    memory '100GB'
     queue params.happyQueue
     time '23h'
     errorStrategy 'ignore'
