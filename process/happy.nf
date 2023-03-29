@@ -6,12 +6,15 @@ process happy {
     output:
         tuple path("${sampleId}-${tag}-${chr}*"),  val("${outDir}/${sampleId}-${tag}/${chr}/"), emit: publishFiles
 
-    container params.happyContainer
-    cpus params.happyCpus
-    memory '100GB'
-    queue params.happyQueue
+    container "${ workflow.containerEngine == 'singularity' ? 'docker://quay.io/biocontainers/hap.py:0.3.14--py27h5c5a3ab_0' : 'quay.io/biocontainers/hap.py:0.3.14--py27h5c5a3ab_0'}"
+    cpus 2
+
+    tag "${sampleId}-${tag}-${chr}"
+    memory { 50.GB * 2 * task.attempt }
+    errorStrategy { sleep(Math.pow(2, task.attempt) * 600 as long); return 'retry' }
+    maxRetries 10
+
     time '23h'
-    errorStrategy 'ignore'
     clusterOptions '-A tgen-371000'
 
     script:
