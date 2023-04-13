@@ -31,10 +31,14 @@ workflow {
         'chr22'
     ]
 
-     xx = CSV_PARSE(params.input)
-
-    xx = xx.combine(allChromosomes).map { it[0] + [ chr: it[1] ] + [ vcfTruth: it[0].vcfTruth.replace('chr*', it[1]) ] }
-    xx = xx.filter{ it.vcfTest != '' }
+    xx = CSV_PARSE(params.input)
+    if (params.chromosome != 'all') {
+        chromosomes = Channel.from(params.chromosome)
+    } else {
+        chromosomes = Channel.from(allChromosomes)
+    }
+    xx = xx.combine(chromosomes).map { it[0] + [ chr: it[1] ] + [ vcfTruth: it[0].vcfTruth.replace('chr*', it[1]) ] }
+    xx = xx.filter{ it.vcfTest != '' }.view()
     happy(xx, params.outputFolder)
 
     publishResults(happy.out.publishFiles)

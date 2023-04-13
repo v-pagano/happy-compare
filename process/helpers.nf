@@ -6,6 +6,7 @@ process publishResults {
         path f
 
     cpus 1
+    time '23h'
     publishDir path: "${outDir}", mode: 'copy', overwrite: 'true'
 
     script:
@@ -24,6 +25,7 @@ process gzip {
 
     container 'docker://ghcr.io/v-pagano/pigz'
     clusterOptions '-A tgen-371000'
+    time '23h'
 
 
     cpus 24
@@ -45,6 +47,7 @@ process tabix {
 
     container 'docker://quay.io/biocontainers/tabix:1.11--hdfd78af_0'
     cpus 2
+    time '23h'
 
     script:
     """
